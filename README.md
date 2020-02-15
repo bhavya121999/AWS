@@ -7,7 +7,11 @@ Get the IDs of the EC2 instances that you want to stop and start, and then follo
  ## Create an IAM policy and role
 1.    [Create an IAM policy using the JSON policy editor](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor). Paste this JSON policy document into the policy editor:
 
+![image](https://user-images.githubusercontent.com/46423346/74591960-af758680-5042-11ea-86e1-09ea23095958.png)
+
 2.    [Create an IAM role for Lambda](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html#roles-creatingrole-service-console). When attaching a permissions policy, search for and choose the IAM policy that you created.
+
+![image](https://user-images.githubusercontent.com/46423346/74592061-94efdd00-5043-11ea-9f5a-02049ca172ae.png)
 
 ## Create Lambda functions that stop and start your EC2 instances
 1.    In the [Lambda console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions), choose **Create function**.
@@ -39,6 +43,7 @@ Get the IDs of the EC2 instances that you want to stop and start, and then follo
 
 ***Note: For region and instances, use the same values that you used for the code to stop your EC2 instances.***
 
+![image](https://user-images.githubusercontent.com/46423346/74592081-cbc5f300-5043-11ea-906f-af78117b92a6.png)
 
 
 ## Test your Lambda functions
@@ -100,3 +105,7 @@ For **State**, select the Enabled check box.
 In step 5, for **Cron expression**, enter an expression that tells Lambda when to start your instances.
 In step 8, for **Function**, choose the function that starts your EC2 instances.
 In step 10, under **Rule definition**, enter a Name like "StartEC2Instances", and optionally enter a Description like "Starts EC2 instances every morning at 6 AM."
+
+![image](https://user-images.githubusercontent.com/46423346/74592293-d8e3e180-5045-11ea-8f36-fc9d410b5795.png)
+
+
